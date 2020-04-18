@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import styles from './Index.module.scss';
+import styles from './index.module.scss';
 import App from './ListingPage';
 
 document.addEventListener("DOMContentLoaded", () => {
