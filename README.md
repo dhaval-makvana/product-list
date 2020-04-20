@@ -1,8 +1,8 @@
-]## Product List Page
+## Product List Page
 
 This App is has a product listing page where you can search for the products you're looking.
 
-Try the hosted app *here(https://obscure-ravine-36537.herokuapp.com/)* or Tickle the with the code in your local machine using the setup below.
+Try the hosted app *here[https://obscure-ravine-36537.herokuapp.com/]* or Tickle the with the code in your local machine using the setup below.
 
 
 ## Setting up the project locally
