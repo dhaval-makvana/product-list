@@ -1,23 +1,10 @@
-@import "./components/defines.scss";
+@import "../defines.scss";
 
-.page {
-  height: 100vh;
-  overflow: auto;
-  width: 100%;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(29rem, 1fr));
-  grid-gap: 3rem;
-  margin: 3rem;
-  min-height: calc(100vh - 43rem);
-  overflow: hidden;
-
-  @include lg {
-    margin: 2rem 10rem;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-  }
+.scrollingWrapperContainer {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  position: relative;
 }
 
 .scrollTop {
@@ -46,7 +33,7 @@
   background-size: contain;
   display: inline-block;
   background-repeat: no-repeat;
-  background-image: url('./icons/upload.svg');
+  background-image: url('../../icons/upload.svg');
   height: 100%;
   width: 100%;
   background-position: center;

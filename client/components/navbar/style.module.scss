@@ -10,7 +10,7 @@
   background-color: #fff;
   box-shadow: 0 10px 8px -8px #ddd;
 
-  @include md {
+  @include lg {
     height: 8rem;
     justify-content: flex-start;
     padding: 0 5rem;
@@ -24,7 +24,7 @@
   justify-content: center;
   align-items: center;
 
-  @include md {
+  @include lg {
     height: 7rem;
   }
 }
@@ -37,7 +37,7 @@
   height: 12rem;
   background-position: center;
 
-  @include md {
+  @include lg {
     height: 5rem;
   }
 }

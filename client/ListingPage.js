@@ -4,14 +4,13 @@ import Navbar from './components/navbar';
 import Searchbar from './components/searchbar';
 import ProductCard from './components/productcard';
 import useProductQuery from './api/products';
+import ScrollToTopController from './components/ScrollToTop';
 
 function App() {
-  const [productList, setProductList] = useState([]);
   const [query, setQuery] = useState('');
   const [pageNumber, setPageNumber] = useState(1);
 
   const { loading, hasMore, products, error } = useProductQuery(query, pageNumber);
-  console.log('products', products);
 
   const observer = useRef();
   const lastProductElementRef = useCallback(
@@ -37,6 +36,7 @@ function App() {
     <div className={styles.page}>
       <Navbar />
       <Searchbar placeholder='Search' onChange={handleSearch} />
+      <ScrollToTopController>
       <div className={styles.grid}>
         {products.map((p, index) => {
           if (products.length === index + 1) {
@@ -48,9 +48,7 @@ function App() {
         {loading && <div>Loading ...</div>}
         {error && <div>Error</div>}
       </div>
-      <span className={styles.scrollTop}>
-        <span className={styles.scrollTopIcon}></span>
-      </span>
+      </ScrollToTopController>
     </div>
   );
 }
