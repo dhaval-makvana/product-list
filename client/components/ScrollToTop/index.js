@@ -28,10 +28,6 @@ class ScrollingWrapper extends React.Component {
     return (
       <React.Fragment>
         {this.state.hasScrolled && (
-          // <div className={styles.scrollToTopIconContainer} onClick={this.scrollToTop}>
-          //   <div>^</div>
-          //   <button className={styles.button}>BACK TO TOP</button>
-          // </div>
           <span className={styles.scrollTop} onClick={this.scrollToTop}>
             <span className={styles.scrollTopIcon}></span>
           </span>

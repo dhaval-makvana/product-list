@@ -34,20 +34,20 @@ function App() {
 
   return (
     <div className={styles.page}>
-      <Navbar />
-      <Searchbar placeholder='Search' onChange={handleSearch} />
       <ScrollToTopController>
-      <div className={styles.grid}>
-        {products.map((p, index) => {
-          if (products.length === index + 1) {
-            return <ProductCard {...p} key={p.id} ref={lastProductElementRef} />;
-          } else {
-            return <ProductCard {...p} key={p.id} />;
-          }
-        })}
-        {loading && <div>Loading ...</div>}
-        {error && <div>Error</div>}
-      </div>
+        <Navbar />
+        <Searchbar placeholder='Search' onChange={handleSearch} />
+        <div className={styles.grid}>
+          {products.map((p, index) => {
+            if (products.length === index + 1) {
+              return <ProductCard {...p} key={p.id} ref={lastProductElementRef} />;
+            } else {
+              return <ProductCard {...p} key={p.id} />;
+            }
+          })}
+          {loading && <div>Loading ...</div>}
+          {error && <div>Error</div>}
+        </div>
       </ScrollToTopController>
     </div>
   );
